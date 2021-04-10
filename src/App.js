@@ -1,13 +1,15 @@
+import "./App.css";
+import React from "react";
+import ListTask from "./components/ListTask/ListTask";
+import Addtask from './components/Addtask/Addtask';
 
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ListTask from './components/ListTask/ListTask';
 
 
 function App() {
   return (
     <div className="App">
-        <ListTask/>
+      <Addtask/>
+      <ListTask/>
     </div>
   );
 }
