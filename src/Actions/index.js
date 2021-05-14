@@ -1,4 +1,4 @@
-import { ADD_TASK } from "../Constants/action-types";
+import { ADD_TASK, EDIT } from "../Constants/action-types";
 import { TOGGLE_TASK } from "../Constants/action-types";
 
 export const addTask = (payload) => {
@@ -13,3 +13,9 @@ export const toggleTask = (payload) => {
     payload: payload,
   };
 };
+export const editTask = (id,text) => {
+  return {
+    type: EDIT,
+    payload: {id,text},
+  }
+}

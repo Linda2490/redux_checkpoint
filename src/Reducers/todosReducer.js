@@ -44,6 +44,11 @@ export default function todosReducer(state = initialState, action) {
         ),
       };
     }
+    case EDIT: {
+      return {
+        ...state,todos : state.todos.map (todo=>todo.id === payload.id ? {...todo,task: payload.text} : todo)
+      }
+    }
     default:
       return state;
   }
